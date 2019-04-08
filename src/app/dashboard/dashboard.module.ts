@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 
-import { ListPage } from './list.page';
+import { DashboardPage } from './dashboard.page';
 
 @NgModule({
   imports: [
@@ -12,12 +12,10 @@ import { ListPage } from './list.page';
     FormsModule,
     IonicModule,
     RouterModule.forChild([
-      {
-        path: '',
-        component: ListPage
-      }
+      { path: '', redirectTo: '1', pathMatch: 'full' },
+      { path: ':id', component: DashboardPage }
     ])
   ],
-  declarations: [ListPage]
+  declarations: [DashboardPage]
 })
-export class ListPageModule {}
+export class DashboardPageModule {}

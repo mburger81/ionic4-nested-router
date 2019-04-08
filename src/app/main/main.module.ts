@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 
-import { HomePage } from './home.page';
+import { MainPage } from './main.page';
 
 @NgModule({
   imports: [
@@ -14,10 +14,15 @@ import { HomePage } from './home.page';
     RouterModule.forChild([
       {
         path: '',
-        component: HomePage
+        component: MainPage,
+        children: [
+          { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+          { path: 'dashboard', loadChildren: './../dashboard/dashboard.module#DashboardPageModule'}
+
+        ]
       }
     ])
   ],
-  declarations: [HomePage]
+  declarations: [MainPage]
 })
-export class HomePageModule {}
+export class MainPageModule {}
