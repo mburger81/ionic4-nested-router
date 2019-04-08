@@ -16,8 +16,12 @@ export class DashboardPage {
   }
   ionViewWillEnter() {
     this.id = this.route.snapshot.paramMap.get('id');
-  }
 
+    console.log('ionViewWillEnter id:', this.id);
+  }
+  ionViewDidEnter() {
+    console.log('ionViewDidEnter id:', this.id);
+  }
   ionViewWillLeave() {
     console.log('ionViewWillLeave id:', this.id);
   }
