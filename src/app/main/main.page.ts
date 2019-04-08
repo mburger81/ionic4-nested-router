@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class MainPage {
 
+
+  ionViewWillEnter() {
+    console.log('MainPage ionViewWillEnter');
+  }
+  ionViewDidEnter() {
+    console.log('MainPage ionViewDidEnter');
+  }
+  ionViewWillLeave() {
+    console.log('MainPage ionViewWillLeave');
+  }
+  ionViewDidLeave() {
+    console.log('MainPage ionViewDidLeave');
+  }
+
 }

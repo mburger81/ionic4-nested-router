@@ -17,15 +17,15 @@ export class DashboardPage {
   ionViewWillEnter() {
     this.id = this.route.snapshot.paramMap.get('id');
 
-    console.log('ionViewWillEnter id:', this.id);
+    console.log('DashboardPage ionViewWillEnter id:', this.id);
   }
   ionViewDidEnter() {
-    console.log('ionViewDidEnter id:', this.id);
+    console.log('DashboardPage ionViewDidEnter id:', this.id);
   }
   ionViewWillLeave() {
-    console.log('ionViewWillLeave id:', this.id);
+    console.log('DashboardPage ionViewWillLeave id:', this.id);
   }
   ionViewDidLeave() {
-    console.log('ionViewDidLeave id:', this.id);
+    console.log('DashboardPage ionViewDidLeave id:', this.id);
   }
 }

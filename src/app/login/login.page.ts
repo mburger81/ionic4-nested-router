@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class LoginPage {
 
+  ionViewWillEnter() {
+    console.log('LoginPage ionViewWillEnter');
+  }
+  ionViewDidEnter() {
+    console.log('LoginPage ionViewDidEnter');
+  }
+  ionViewWillLeave() {
+    console.log('LoginPage ionViewWillLeave');
+  }
+  ionViewDidLeave() {
+    console.log('LoginPage ionViewDidLeave');
+  }
 }
