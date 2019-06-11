@@ -14,6 +14,18 @@ export class DashboardPage {
   constructor(private route: ActivatedRoute) {
 
   }
+  ngOnInit() {
+    console.log('DashboardPage ngOnInit id:', this.id);
+  }
+  ngAfterContentInit() {
+    console.log('DashboardPage ngAfterContentInit id:', this.id);
+  }
+  ngAfterViewInit() {
+    console.log('DashboardPage ngAfterViewInit id:', this.id);
+  }
+  ngOnDestroy() {
+    console.log('DashboardPage ngOnDestroy id:', this.id);
+  }
   ionViewWillEnter() {
     this.id = this.route.snapshot.paramMap.get('id');
 
